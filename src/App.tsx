@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import "katex/dist/katex.min.css";
 
 const AnalyzeAi = () => {
@@ -8,6 +8,7 @@ const AnalyzeAi = () => {
 
   function handleAnalyzeButton() {
     setIsAnalyzing(true);
+    setAnalyzedData(inputData);
     console.log("hei there");
     setIsAnalyzing(false);
   }
@@ -60,7 +61,7 @@ const AnalyzeAi = () => {
       </div>
 
       {analyzedData && (
-        <div className="mt-8 max-w-[600px] p-8 bg-gray-800 rounded-lg text-white">
+        <div className="mt-8 w-[60%] p-8 bg-gray-800 rounded-lg text-white">
           <h1 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Analysis Result
           </h1>
